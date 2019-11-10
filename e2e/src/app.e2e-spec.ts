@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to s4n-nano-sitio!');
+    expect(page.getTitleText()).toEqual('Welcome to ic-gestor-de-candidatos!');
   });
 
   afterEach(async () => {

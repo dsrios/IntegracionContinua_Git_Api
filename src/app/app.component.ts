@@ -7,7 +7,7 @@ import { RegistroService } from './shared/registro.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 's4n-nano-sitio';
+  title = 'ic-gestor-de-candidatos';
   arrayData = {};
 
   constructor(private serviceRegistro : RegistroService) {
