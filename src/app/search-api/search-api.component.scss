@@ -1,0 +1,56 @@
+.container {
+    height: 100vh;
+
+    &-1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        // mat-form-field {
+        //     width: 45%;
+        // }
+    }
+
+    &-table {
+        max-height: 47vh;
+        overflow-x: auto;
+    }
+}
+
+.example-form {
+    width: 69%;
+}
+  
+.example-full-width {
+    width: 100%;
+}
+
+.disabled {
+    pointer-events: none;
+    background-color: gray;
+    display: flex;
+    height: min-content;
+}
+
+.available {
+    display: flex;
+    height: min-content;
+}
+
+table {
+    width: 100%;
+}
+  
+th.mat-sort-header-sorted {
+    color: black;
+}
+  
+::ng-deep tbody {
+    word-break: break-word;
+}
+
+.container-head {
+    display: flex;
+    width: 65%;
+    max-height: 8vh;
+}

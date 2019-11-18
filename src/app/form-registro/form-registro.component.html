@@ -1,0 +1,43 @@
+
+<div class="container">
+
+    <div class="container-1">
+        <mat-form-field>
+            <input matInput [(ngModel)]="nombres" placeholder="Nombres" type="text"> 
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput [(ngModel)]="apellidos" placeholder="Apellidos" type="text">
+        </mat-form-field>
+    </div>
+
+    <div class="container-2">
+        <mat-form-field>
+            <input matInput [(ngModel)]="cc" placeholder="Cedula" type="number" [formControl]="cedula" required>
+            <mat-error *ngIf="cedula.invalid">{{ErrorMessage("cedula")}}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput [(ngModel)]="fechaNacimiento" [matDatepicker]="picker" placeholder="Fecha de Nacimiento">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+        </mat-form-field>
+    </div>
+
+    <mat-form-field>
+        <input matInput [(ngModel)]="correo" placeholder="Correo Electronico" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{ErrorMessage("email")}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput [(ngModel)]="github" placeholder="Usuario GitHub" type="text" [formControl]='gitUser' required>
+        <mat-error *ngIf="gitUser.invalid">{{ErrorMessage("git")}}</mat-error>
+      </mat-form-field>  
+    
+    <button mat-raised-button 
+            color="primary" 
+            (click)="save()"
+            [ngClass]="{'disabled' : !email.valid || !cedula.valid || !gitUser.valid}">Guardar</button>
+ </div>
+
+ 
