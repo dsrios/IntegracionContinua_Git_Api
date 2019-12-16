@@ -1,4 +1,5 @@
 .container {
+    color: #658D8E;
     display: grid;
     max-height: 20vh;
     width: -webkit-fill-available;
@@ -6,8 +7,10 @@
     align-content: center;
     margin: auto;
     padding: 5px;
+   
 
     &-1 {
+        color: #658D8E; 
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -18,6 +21,7 @@
     }
 
     &-2 {
+        color: #658D8E;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -30,5 +34,6 @@
 
 .disabled {
     pointer-events: none;
-    background-color: gray;
+    background-color: #6A97A5;
 }
+
