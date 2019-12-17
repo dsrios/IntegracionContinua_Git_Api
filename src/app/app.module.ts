@@ -26,6 +26,7 @@ import { SearchApiComponent } from './search-api/search-api.component';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
+import { ListUsersComponent } from './list-users/list-users.component';
 
 
 
@@ -33,7 +34,8 @@ import { CookieService } from 'ngx-cookie-service';
   declarations: [
     AppComponent,
     FormRegistroComponent,
-    SearchApiComponent
+    SearchApiComponent,
+    ListUsersComponent
   ],
   imports: [
     BrowserModule,
