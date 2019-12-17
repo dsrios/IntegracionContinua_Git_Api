@@ -14,7 +14,7 @@ export class ListUsersComponent implements OnInit {
   arrayData = {};
  
 
-  public displayedColumns: string[] = ['name', 'apellidos', 'email', 'git_user', 'description'];
+  public displayedColumns: string[] = ['nombre', 'apellido', 'cc', 'fechaNacimiento', 'correo', 'github'];
   public arrayDataSource = new MatTableDataSource<datosTabla>();
 
   userSearch: string = '';
@@ -32,19 +32,26 @@ export class ListUsersComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
 
   
-  constructor(private serviceRegistro : RegistroService,private snackBar: MatSnackBar) {
+  constructor(private serviceRegistro: RegistroService, private snackBar: MatSnackBar) {
     // console.log(JSON.parse(this.serviceRegistro.getCookie()));
-    this.arrayData = JSON.parse(this.serviceRegistro.getCookie())[0];
-
+    // this.arrayData = JSON.parse(this.serviceRegistro.getCookie())[0];
+    // console.log('registrado ', JSON.parse(this.serviceRegistro.getCookie())[0]);
+    
+    this.arrayDataSource.data = JSON.parse(this.serviceRegistro.getCookie());
   }
 
-ngOnInit() { 
+ngOnInit() {
 
 }
 
+// To be complete
+search() {
+  // console.log('search ', this.serviceRegistro.getCookie());
+  this.arrayDataSource.data = JSON.parse(this.serviceRegistro.getCookie());
+}
 
 ngAfterViewInit(): void {
-  this.arrayDataSource.sort = this.sort; 
+  this.arrayDataSource.sort = this.sort;
   this.arrayDataSource.paginator = this.paginator;
 }
 
@@ -72,12 +79,14 @@ public doFilter = (value: string) => {
 
 }
 
+// tslint:disable-next-line:class-name
 export interface datosTabla {
-  name: string;
-  apellidos: string;
-  email: string;
-  git_user: string;
-  description: string;
+  nombre: string;
+  apellido: string;
+  cc: any;
+  fechaNacimiento: string;
+  correo: string;
+  github: string;
 }
 
 export interface User {

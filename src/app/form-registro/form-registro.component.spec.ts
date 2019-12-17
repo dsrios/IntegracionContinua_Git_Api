@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FormRegistroComponent } from './form-registro.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
+import { MatSnackBar } from '@angular/material';
+import { Overlay } from '@angular/cdk/overlay';
 
 describe('FormRegistroComponent', () => {
   let component: FormRegistroComponent;
@@ -8,7 +12,15 @@ describe('FormRegistroComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FormRegistroComponent ]
+      providers: [
+        CookieService,
+        MatSnackBar,
+        Overlay
+      ],
+      declarations: [ FormRegistroComponent ],
+      schemas: [
+        NO_ERRORS_SCHEMA
+      ]
     })
     .compileComponents();
   }));

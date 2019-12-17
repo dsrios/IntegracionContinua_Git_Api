@@ -38,7 +38,7 @@ export class SearchApiComponent implements OnInit, AfterViewInit {
       startWith<string | User>(''),
       map(value => typeof value === 'string' ? value : value.name),
       map(name => name ? this._filter(name) : this.options)
-    ); 
+    );
   }
 
   @ViewChild(MatPaginator) paginator: MatPaginator;

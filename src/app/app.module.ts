@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 
 
 import {HttpClientModule} from '@angular/common/http';
@@ -35,7 +35,7 @@ import { ListUsersComponent } from './list-users/list-users.component';
     AppComponent,
     FormRegistroComponent,
     SearchApiComponent,
-    ListUsersComponent
+    ListUsersComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +58,7 @@ import { ListUsersComponent } from './list-users/list-users.component';
   ],
   exports: [],
   providers: [MatDatepickerModule, CookieService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
 })
 export class AppModule { }
