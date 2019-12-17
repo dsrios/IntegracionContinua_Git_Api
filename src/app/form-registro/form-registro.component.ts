@@ -5,7 +5,7 @@ import { RegistroService } from '../shared/registro.service';
 // import {MatSnackBar} from '@angular/material';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material';
 
-
+// Formulario registro
 @Component({
   selector: 'app-form-registro',
   templateUrl: './form-registro.component.html',
