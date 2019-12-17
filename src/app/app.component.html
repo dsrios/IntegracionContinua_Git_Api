@@ -7,12 +7,12 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="body-head">
+  <!-- <div class="body-head">
       <div *ngFor="let item of arrayData | keyvalue">
         <label> {{item.key | uppercase }} : </label>{{item.value}}
       </div>
   </div>
-  <hr>
+  <hr> -->
   <div class="body-container">
     <mat-tab-group dynamicHeight>
       <mat-tab label="Formulario Registro">
@@ -23,6 +23,11 @@
       <mat-tab label="Consulta de repositorios">
         <div class="large-box mat-elevation-z4">
           <app-search-api [updateCookies]="arrayData"></app-search-api>
+        </div>
+      </mat-tab>
+      <mat-tab label="Usuarios registrados">
+        <div class="large-box mat-elevation-z4">
+          <app-list-users></app-list-users>
         </div>
       </mat-tab>
     </mat-tab-group>

@@ -30,13 +30,15 @@
   }
   
   .large-box {
-    display: block;
+    // display: block;
     // height: 440px;
-    max-height: 379px;
+    // max-height: 379px;
     // width: 80%;
+   //  max-height: 37vh;
+    overflow-x: auto;
   }
   
   ::ng-deep .mat-tab-body-content {
-    max-height: 440px;
+    // max-height: 440px;
   }
   
